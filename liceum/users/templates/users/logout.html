@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %} {%load crispy_forms_tags %} {% block content %}
+<div class="display-middle">
+
+    <div class="wrap"></div>
+    <div class="nav-bg"></div>
+    <h2 style="font-size: 2rem; margin: 20px;">Ви вийшли з свого акаунта</h2>
+
+    <small style="font-size: 0.9rem; color: #9D30F6;" class="text-muted">
+            Бажаєте увійти?
+            <a  href="{% url 'login' %}">Увійти</a>
+        </small>
+</div>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %} {%load crispy_forms_tags %} {% block content %}
+
+
+
+<div class="wrap"></div>
+<div class="nav-bg"></div>
+<div class="formwrap">
+    <h1 style=" text-align: center; margin: 20px; text-transform: uppercase;"> Зареєструватись </h1>
+
+    <div class="content-section">
+        <form style="border: 1px solid  rgb(113, 169, 238); padding: 20px" method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+
+                {{form|crispy}}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">
+                Готово
+            </button>
+            </div>
+
+        </form>
+    </div>
+    <div class="text-center">
+        <small style=" text-align: center;" class="text-muted">
+                            Вже зареєстровані?
+                            <a class="ml-2" href="{% url 'login' %}">Увійти</a>
+            </small>
+    </div>
+</div>
+</div>
+{% endblock content %}
